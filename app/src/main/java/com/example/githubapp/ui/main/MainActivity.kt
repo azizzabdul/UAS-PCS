@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
             rvUser.setHasFixedSize(true)
             rvUser.adapter = adapter
 
-            btnSearch.setOnClickListener { 
-                
+            btnSearch.setOnClickListener {
+                searchUser()
             }
             
             etQuery.setOnKeyListener { v, keyCode, event ->
@@ -102,13 +102,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-//        val id = item.itemId
-//        if (id == R.id.local_english) {
-//            Toast.makeText(this,"English Languages ComingSoon", Toast.LENGTH_SHORT).show()
-//        }
-//        if (id == R.id.local_indonesia) {
-//            Toast.makeText(this,"Indonesia Languages ComingSoon", Toast.LENGTH_SHORT).show()
-//        }
         when (item.itemId){
             R.id.languages_settings -> showLanguages()
         }
